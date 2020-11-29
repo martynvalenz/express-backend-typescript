@@ -17,7 +17,7 @@ export const createUser = async (req:Request, res:Response):Promise<void> => {
          email:email,
          password:hash
       })
-      res.send(user._id)
+      res.send(user)
    } 
    catch (e) {
       res.status(e.status || 500).send(e.message)
